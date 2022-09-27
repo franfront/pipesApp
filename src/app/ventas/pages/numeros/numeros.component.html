@@ -1,1 +1,48 @@
-<p>numeros works!</p>
+<div class="text-layout">
+    <h1>Pipes Decimal y Porcentaje</h1>
+    <p>Pipes incluidos en Angular</p>
+</div>
+
+
+  <div class="grid">
+    <div class="col-6">
+        <p-card header="Ventas Netas" subheader="del año actual">
+            
+
+              <ul>
+                <li>{{ porcentaje | percent:'2.2-2' }}</li>
+                <hr>
+                <li>{{  ventasNetas + 2000000 | currency:'JPY':'symbol-narrow':'1.4-4' }}</li>
+                <hr>
+                <li>{{ventasNetas | number:"1.2-2" }}</li>
+                <hr>
+              </ul>
+            
+           
+              
+          
+        </p-card>
+    </div>
+
+    <div class="col-6">
+        <p-card header="Ventas Netas" subheader="del año actual">
+            
+
+              <ul>
+                <li>porcentaje | percent:'2.2-2'</li>
+                <hr>
+                <li> ventasNetas + 2000000 | currency:'JPY':'symbol-narrow':'1.4-4</li>
+                <hr>
+                <li>ventasNetas | number:"1.2-2"</li>
+                <hr>
+              </ul>
+            
+           
+              
+          
+        </p-card>
+    </div>
+
+
+   
+  </div>
