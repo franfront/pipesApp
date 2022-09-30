@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -40,6 +41,14 @@ export class NoComunesComponent {
   heroes = [
     { nombre: 'Batman', vuela: false },
     { nombre: 'Superman', vuela: true },
-    { nombre: 'Wonder Woman', vuela: true }
-];
+    { nombre: 'Wonder Woman', vuela: true },
+  ];
+
+  miObservable = interval(1000);
+
+  valorP = new Promise((res, rej) => {
+    setTimeout(() => {
+      res('Fin de la promesa');
+    }, 3500);
+  });
 }
